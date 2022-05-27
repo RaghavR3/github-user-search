@@ -37,7 +37,7 @@ function App() {
   });
 
   return (
-    <div className="bg-quaternary-blue dark:bg-blue-darker w-[100vw] h-[100vh] px-6 py-8">
+    <div className="bg-quaternary-blue dark:bg-blue-darker w-[100vw] h-[100vh] px-6 py-8 lg:py-10 lg:px-40 ">
       <Header></Header>
       <SearchBar
         functions={[
