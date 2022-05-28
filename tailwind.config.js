@@ -13,6 +13,7 @@ module.exports = {
         "white-dark": "#FFFFFF",
         "secondary-blue-dark": "#141D2F",
         "tertiary-blue-dark": "#1E2A47",
+        "button-hover": "#60ABFF",
       },
     },
   },

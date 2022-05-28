@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function App() {
   const [userName, setUsername] = useState("The Octocat");
-  const [user, setUser] = useState("@octocat");
+  const [user, setUser] = useState("octocat");
   const [joined, setJoined] = useState("2011-01-25T03:43:54Z");
   const [avatar, setAvatar] = useState(
     "https://avatars.githubusercontent.com/u/583231?v=4"

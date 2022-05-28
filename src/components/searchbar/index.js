@@ -67,7 +67,7 @@ const SearchBar = (props) => {
           />
         </svg>
         <input
-          className="text-sm pl-2 text-secondary-blue focus:outline-none w-[210px] dark:bg-tertiary-blue-dark caret-primary-blue"
+          className="text-sm pl-2 text-secondary-blue focus:outline-none w-[210px] md:w-[400px] lg:w-[450px] dark:bg-tertiary-blue-dark caret-primary-blue"
           placeholder="Search Github Username..."
           id="search-input"
         ></input>
@@ -80,7 +80,7 @@ const SearchBar = (props) => {
           No results
         </h3>
         <button
-          className="p-2 bg-primary-blue text-white rounded-md text-sm"
+          className="p-2 bg-primary-blue text-white rounded-md text-sm hover:bg-button-hover"
           onClick={() => {
             getUserInfo(
               setUsername,

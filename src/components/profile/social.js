@@ -6,9 +6,32 @@ const Social = (props) => {
   const twitter = props.data[2] === null ? "Not Available" : props.data[2];
   const company = props.data[3] === null ? "Not Available" : props.data[3];
 
+  useEffect(() => {
+    document.getElementById("location").classList.remove("opacity-50");
+    document.getElementById("blog").classList.remove("opacity-50");
+    document.getElementById("twitter").classList.remove("opacity-50");
+    document.getElementById("company").classList.remove("opacity-50");
+
+    if (location === "Not Available") {
+      document.getElementById("location").classList.add("opacity-50");
+    }
+
+    if (blog === "Not Available") {
+      document.getElementById("blog").classList.add("opacity-50");
+    }
+
+    if (twitter === "Not Available") {
+      document.getElementById("twitter").classList.add("opacity-50");
+    }
+
+    if (company === "Not Available") {
+      document.getElementById("company").classList.add("opacity-50");
+    }
+  });
+
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 pt-6 md:pl-[20rem]">
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center" id="location">
         <svg
           height="20"
           width="14"
@@ -21,7 +44,7 @@ const Social = (props) => {
           {location}
         </p>
       </div>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center" id="blog">
         <svg
           height="20"
           width="20"
@@ -41,7 +64,7 @@ const Social = (props) => {
           {blog}
         </a>
       </div>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center" id="twitter">
         <svg
           height="18"
           width="20"
@@ -54,7 +77,7 @@ const Social = (props) => {
           {twitter}
         </p>
       </div>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center" id="company">
         <svg
           height="20"
           width="20"

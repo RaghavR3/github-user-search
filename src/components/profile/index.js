@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 import Personal from "./personal";
@@ -19,10 +19,21 @@ const Profile = (props) => {
   const twitter = props.data[10] === null ? "Not Available" : props.data[10];
   const company = props.data[11] === null ? "Not Available" : props.data[11];
 
+  useEffect(() => {
+    document.getElementById("bio").classList.remove("opacity-50");
+
+    if (bio === "Not Available") {
+      document.getElementById("bio").classList.add("opacity-50");
+    }
+  });
+
   return (
     <div className="flex flex-col justify-between rounded-lg mt-4 bg-white dark:bg-tertiary-blue-dark px-6 py-8 shadow-lg">
       <Personal data={[userName, user, avatar, joined]} />
-      <p className="py-8 text-sm text-secondary-blue dark:text-white md:pl-[20rem] md:-mt-48">
+      <p
+        className="py-8 text-sm text-secondary-blue dark:text-white md:pl-[20rem] md:-mt-48"
+        id="bio"
+      >
         {bio}
       </p>
       <Stats data={[repos, followers, following]} />
